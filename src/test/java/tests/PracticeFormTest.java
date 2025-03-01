@@ -14,7 +14,6 @@ public class PracticeFormTest extends TestBase {
         StudentData testData = StudentDataFactory.generateFullStudentData();
 
         registrationPage.openPage()
-                .removeBanners()
                 .setFirstName(testData.getFirstName())
                 .setLastName(testData.getLastName())
                 .setEmail(testData.getEmail())
@@ -49,7 +48,6 @@ public class PracticeFormTest extends TestBase {
         StudentData testData = StudentDataFactory.generateMinimalStudentData();
 
         registrationPage.openPage()
-                .removeBanners()
                 .setFirstName(testData.getFirstName())
                 .setLastName(testData.getLastName())
                 .chooseGender(testData.getGender())
@@ -69,7 +67,6 @@ public class PracticeFormTest extends TestBase {
         StudentData testData = StudentDataFactory.generateFirstNameOnlyData();
 
         registrationPage.openPage()
-                .removeBanners()
                 .setFirstName(testData.getFirstName())
                 .submitRegistration()
                 .modalWindowShouldNotExist();
