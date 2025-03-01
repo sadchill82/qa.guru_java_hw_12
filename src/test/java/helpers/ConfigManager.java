@@ -10,11 +10,6 @@ public class ConfigManager {
     private static final boolean ENABLE_VNC = Boolean.parseBoolean(System.getProperty("enableVNC", "true"));
     private static final boolean ENABLE_VIDEO = Boolean.parseBoolean(System.getProperty("enableVideo", "true"));
 
-    static {
-        System.out.println("selenoidUser = " + CREDENTIALS_USR);
-        System.out.println("selenoidPassword = " + CREDENTIALS_PSW);
-    }
-
     public static String getSelenoidUrl() {
         return "https://" + CREDENTIALS_USR + ":" + CREDENTIALS_PSW + "@" + SELENOID_URL + "/wd/hub";
     }
